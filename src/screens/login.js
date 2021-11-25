@@ -21,7 +21,7 @@ export default function Login ({navigation }) {
                         <Text style={styles.formLabel}>Senha:</Text>
                         <TextInput
                             style={styles.input}
-                            placeholder="Insira sua Senha"
+                            placeholder=""
                             //value={input}
                             //onChangeText={ (texto) => setInput(texto) }
                             //secureTextEntry={hidePass}
