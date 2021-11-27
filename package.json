@@ -15,9 +15,16 @@
     "@react-navigation/bottom-tabs": "^6.0.9",
     "@react-navigation/native": "^6.0.6",
     "@react-navigation/native-stack": "^6.2.5",
+    "body-parser": "^1.19.0",
+    "cors": "^2.8.5",
     "expo": "~42.0.1",
+    "expo-camera": "~11.2.2",
+    "expo-contacts": "~9.2.5",
+    "expo-sensors": "~10.2.2",
     "expo-status-bar": "~1.0.4",
+    "express": "^4.17.1",
     "ionicons": "^6.0.0",
+    "mysql2": "^2.3.3",
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-42.0.0.tar.gz",
@@ -25,9 +32,8 @@
     "react-native-screens": "~3.4.0",
     "react-native-vector-icons": "^9.0.0",
     "react-native-web": "~0.13.12",
-    "expo-camera": "~11.2.2",
-    "expo-contacts": "~9.2.5",
-    "expo-sensors": "~10.2.2"
+    "sequelize": "^6.12.0-alpha.1",
+    "sequelize-cli": "^6.3.0"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0"

@@ -34,6 +34,7 @@ export default function Login ({navigation }) {
                         >
                             <Text style={styles.textButton}>Entrar</Text>
                         </TouchableOpacity>
+                        
                     </View>
                 </View>
             </View>

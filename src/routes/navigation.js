@@ -6,7 +6,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 import Login from '../screens/login';
 import Home from '../screens/home';
 import Scanner from '../screens/scanner';
-import Lista from '../screens/lista';
+import Lista from '../screens/Patrimonios/lista';
 import Evento from '../screens/evento';
 import Mensagens from '../screens/mensagens';
 
@@ -42,7 +42,7 @@ const Tab = createBottomTabNavigator();
         })}
 
         >
-
+          
           <Tab.Screen name = "Login" component = {Login} />
           <Tab.Screen name = "Home" component = {Home} />
           <Tab.Screen name = "Scanner" component = {Scanner} />
