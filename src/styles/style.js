@@ -157,7 +157,53 @@ const styles = StyleSheet.create({
         maxHeight: '90%',
         backgroundColor: '#ffffff'
     },
+
+    containerCam: {
+        flex: 1,
+        justifyContent: 'center',
+        alignItems:'center', 
+    },
+
+    camera: {
+        width:  400,
+        height: 400,
+        //width:  "75%",
+        //height: "20%",
+        //borderRadius: 30,
+    },
+
+    cameraButton: {
+        //position: "absolute",
+        //top: 30,
+        //left: 50,
+        margin: 20,
+    },
+
+    contentButton: {
+        //flex: 1,
+        justifyContent: "center",
+        alignItems: "flex-end",
+        margin: 20,
+        backgroundColor:'#2e8b57',
+        borderRadius: 30, 
+    },
     
+    barcodeBox: {
+        backgroundColor: 'fff',
+        alignItems: 'center',
+        justifyContent: 'center',
+        height: 300,
+        width: 300,
+        overflow: 'hidden',
+        borderRadius: 30,
+        backgroundColor: 'tomato',
+    },
+
+    maintext: {
+        fontSize: 16,
+        margin: 20,
+    },
+
 });
 
 export default styles;

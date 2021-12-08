@@ -4,7 +4,7 @@ import styles from '../../styles/style';
 import ListCard from './listCard';
 
 class ListScreen {
-    
+    /*
     constructor(props) {
         super(props)
         this.state = { 
@@ -19,6 +19,7 @@ class ListScreen {
           ] 
         }
     }
+    */
 
     render(){
         return(

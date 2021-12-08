@@ -5,7 +5,7 @@ import Ionicons from 'react-native-vector-icons/Ionicons';
 //import de telas
 import Login from '../screens/login';
 import Home from '../screens/home';
-import Scanner from '../screens/scanner';
+import Scanner from '../screens/barcode_scanner';
 import Lista from '../screens/Patrimonios/lista';
 import Evento from '../screens/evento';
 import Mensagens from '../screens/mensagens';
