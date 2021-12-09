@@ -11,8 +11,11 @@ module.exports = {
       codigo: {
         type: Sequelize.INTEGER
       },
+      nome: {
+        type: Sequelize.STRING
+      },
       estado: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       areaId: {
         type: Sequelize.INTEGER,

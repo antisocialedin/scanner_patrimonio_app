@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, ScrollView, Text, TouchableOpacity} from 'react-native'
 import styles from '../styles/style';
+import { FontAwesome } from "@expo/vector-icons";
 
 export default function Home ({navigation }) {
     return (
@@ -11,43 +12,18 @@ export default function Home ({navigation }) {
             style={styles.homeButton}
             onPress = {() => navigation.navigate('Scanner')}
           >
-            <Text style={styles.textButton}>Scanner</Text>
+            <FontAwesome name="barcode" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Scanner</Text> 
           </TouchableOpacity>
         </View>
 
         <View style={styles.boxButton}>
           <TouchableOpacity
             style={styles.homeButton}
-            onPress = {() => navigation.navigate('Lista de Patrimonios')}
+            onPress = {() => navigation.navigate('Perfil do Servidor')}
           >
-            <Text style={styles.textButton}>Lista de Patrimonios</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
-            onPress = {() => navigation.navigate('Evento')}
-          >
-            <Text style={styles.textButton}>Eventos</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
-            onPress = {() => navigation.navigate('Mensagens')}
-          >
-            <Text style={styles.textButton}>Mensagens</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
-            onPress = {() => navigation.navigate('Cadastro de Servidores')}
-          >
-            <Text style={styles.textButton}>Cadastro Servidores</Text>
+            <FontAwesome name="user" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Perfil</Text>
           </TouchableOpacity>
         </View>
 
@@ -56,7 +32,58 @@ export default function Home ({navigation }) {
             style={styles.homeButton}
             onPress = {() => navigation.navigate('Cadastro de Patrimonios')}
           >
-            <Text style={styles.textButton}>Cadastro Patrimonios</Text>
+            <FontAwesome name="plus-circle" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Cadastro Patrimonio</Text> 
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.boxButton}>
+          <TouchableOpacity
+            style={styles.homeButton}
+            onPress = {() => navigation.navigate('Lista de Patrimonios')}
+          >
+            <FontAwesome name="fire-extinguisher" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Patrimonio</Text> 
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.boxButton}>
+          <TouchableOpacity
+            style={styles.homeButton}
+            onPress = {() => navigation.navigate('Cadastro de Áreas')}
+          >
+            <FontAwesome name="codepen" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Cadastro Área</Text> 
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.boxButton}>
+          <TouchableOpacity
+            style={styles.homeButton}
+            onPress = {() => navigation.navigate('Lista de Áreas')}
+          >
+            <FontAwesome name="map" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Área</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.boxButton}>
+          <TouchableOpacity
+            style={styles.homeButton}
+            onPress = {() => navigation.navigate('Cadastro de Servidores')}
+          >
+            <FontAwesome name="user-plus" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Cadastro Servidor</Text>
+          </TouchableOpacity>
+        </View>
+
+        <View style={styles.boxButton}>
+          <TouchableOpacity
+            style={styles.homeButton}
+            onPress = {() => navigation.navigate('Cadastro de Servidores')}
+          >
+            <FontAwesome name="users" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Servidor</Text>
           </TouchableOpacity>
         </View>
 

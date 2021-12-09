@@ -9,7 +9,7 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       prontuario: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       nome: {
         type: Sequelize.STRING

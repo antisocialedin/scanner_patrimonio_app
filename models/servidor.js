@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
     }
   };
   Servidor.init({
-    prontuario: DataTypes.INTEGER,
+    prontuario: DataTypes.STRING,
     nome: DataTypes.STRING,
     senha: DataTypes.STRING
   }, {

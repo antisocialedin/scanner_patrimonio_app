@@ -10,12 +10,13 @@ module.exports = (sequelize, DataTypes) => {
      * The `models/index` file will call this method automatically.
      */
     static associate(models) {
-      Patrimonio.belongsTo(models.Area);
+      // define association here
     }
   };
   Patrimonio.init({
     codigo: DataTypes.INTEGER,
-    estado: DataTypes.INTEGER,
+    nome: DataTypes.STRING,
+    estado: DataTypes.STRING,
     areaId: DataTypes.INTEGER
   }, {
     sequelize,

@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         //alignItems: 'center',
         //justifyContent: 'center',
         width: '45%',
-        height: '45%',
+        height: '28%',
         padding: 5,
         backgroundColor:'#696969',
         //paddingTop:14,
@@ -204,6 +204,92 @@ const styles = StyleSheet.create({
         margin: 20,
     },
 
+    centeredView: {
+        flex: 1,
+        alignItems: "center",
+        marginTop: 30
+    },
+
+    cardView: {
+        flexDirection: 'row',
+        justifyContent: 'space-between',
+        margin: 5,
+        backgroundColor: "white",
+        borderRadius: 15,
+        padding: 15,
+        shadowColor: "#000",
+        shadowOffset: {
+          width: 0,
+          height: 2
+        },
+        shadowOpacity: 0.25,
+        shadowRadius: 3.84,
+        elevation: 5,
+        width: '94%',
+        minHeight: 200
+    },
+
+    promotionImage: {
+        width: '50%'
+    },
+
+    descriptionText: {
+        flex: 1
+    },
+
+    titleText: {
+        color: "black",
+        fontWeight: "bold",
+        fontSize: 16,
+        margin: 5
+    },
+
+    priceText: {
+        color: "#e73931",
+        fontWeight: "bold",
+        fontSize: 16,
+        margin: 5
+    },
+
+    linkButton: {
+        backgroundColor: "#2196F3",
+        borderRadius: 15,
+        padding: 10,
+        elevation: 2,
+        margin: 5
+    },
+
+    textLinkButton: {
+        color: "#FFFFFF",
+        textAlign: 'center'
+    },
+
+    promotionsList: {
+        minHeight: '90%',
+        maxHeight: '90%',
+        backgroundColor: '#ffffff'
+    }, 
+
+    lista: {
+        backgroundColor: "orange",
+        height: 80,
+        margin: 5,
+        justifyContent: "center",
+        alignItems: "center",
+        borderRadius: 20,
+    },
+
+    textoLista: {
+        color: "white",
+        fontWeight: "bold",
+        fontSize: 24,
+    },
+
+    texto2Lista: {
+        color: "gray",
+        fontWeight: "bold",
+        fontSize: 18,
+    }
 });
 
 export default styles;

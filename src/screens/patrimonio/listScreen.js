@@ -1,10 +1,9 @@
-import React from 'react';
-import { View, Text, FlatList, TouchableOpacity, Image} from 'react-native'
+import React, { Component } from 'react'
+import { FlatList } from 'react-native'
 import styles from '../../styles/style';
-import ListCard from './listCard';
+import ListCard from './listCard'
 
 class ListScreen {
-    /*
     constructor(props) {
         super(props)
         this.state = { 
@@ -19,7 +18,6 @@ class ListScreen {
           ] 
         }
     }
-    */
 
     render(){
         return(
