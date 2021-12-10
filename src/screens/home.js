@@ -10,16 +10,6 @@ export default function Home ({navigation }) {
         <View style={styles.boxButton}>
           <TouchableOpacity
             style={styles.homeButton}
-            onPress = {() => navigation.navigate('Scanner')}
-          >
-            <FontAwesome name="barcode" size={30} color="white"></FontAwesome>
-            <Text style={styles.textButton}>Scanner</Text> 
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
             onPress = {() => navigation.navigate('Perfil do Servidor')}
           >
             <FontAwesome name="user" size={30} color="white"></FontAwesome>
@@ -30,62 +20,12 @@ export default function Home ({navigation }) {
         <View style={styles.boxButton}>
           <TouchableOpacity
             style={styles.homeButton}
-            onPress = {() => navigation.navigate('Cadastro de Patrimonios')}
+            onPress = {() => navigation.navigate('Lista de Eventos')}
           >
-            <FontAwesome name="plus-circle" size={30} color="white"></FontAwesome>
-            <Text style={styles.textButton}>Cadastro Patrimonio</Text> 
+            <FontAwesome name="calendar" size={30} color="white"></FontAwesome>
+            <Text style={styles.textButton}>Eventos</Text> 
           </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
-            onPress = {() => navigation.navigate('Lista de Patrimonios')}
-          >
-            <FontAwesome name="fire-extinguisher" size={30} color="white"></FontAwesome>
-            <Text style={styles.textButton}>Patrimonio</Text> 
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
-            onPress = {() => navigation.navigate('Cadastro de Áreas')}
-          >
-            <FontAwesome name="codepen" size={30} color="white"></FontAwesome>
-            <Text style={styles.textButton}>Cadastro Área</Text> 
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
-            onPress = {() => navigation.navigate('Lista de Áreas')}
-          >
-            <FontAwesome name="map" size={30} color="white"></FontAwesome>
-            <Text style={styles.textButton}>Área</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
-            onPress = {() => navigation.navigate('Cadastro de Servidores')}
-          >
-            <FontAwesome name="user-plus" size={30} color="white"></FontAwesome>
-            <Text style={styles.textButton}>Cadastro Servidor</Text>
-          </TouchableOpacity>
-        </View>
-
-        <View style={styles.boxButton}>
-          <TouchableOpacity
-            style={styles.homeButton}
-            onPress = {() => navigation.navigate('Cadastro de Servidores')}
-          >
-            <FontAwesome name="users" size={30} color="white"></FontAwesome>
-            <Text style={styles.textButton}>Servidor</Text>
-          </TouchableOpacity>
-        </View>
+        </View> 
 
       </View>
     );

@@ -94,6 +94,7 @@ const styles = StyleSheet.create({
     formLabel: {
         color: '#ffffff',
         fontSize:18,
+        fontWeight: 'bold',
         paddingLeft:20,
     },
 
@@ -107,9 +108,9 @@ const styles = StyleSheet.create({
     },
 
     textTitle: {
-        color: '#FF0043',
-        fontSize: 24,
-        fontWeight: 'bold',
+        color: '#FFFFFF',
+        fontSize: 16,
+        paddingLeft:10,
     },
 
     listContainer: {
@@ -117,53 +118,13 @@ const styles = StyleSheet.create({
         alignItems: "center",
         marginTop: 30
     },
-      
-    cardView: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        margin: 5,
-        backgroundColor: "white",
-        borderRadius: 15,
-        padding: 15,
-        shadowColor: "#000",
-        shadowOffset: {
-            width: 0,
-            height: 2
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-        width: '94%',
-        minHeight: 200
-    },
-
-    promotionImage: {
-        width: '50%'
-    },
-
-    descriptionText: {
-        flex: 1
-    },
-
-    titleText: {
-        color: "black",
-        fontWeight: "bold",
-        fontSize: 16,
-        margin: 5
-    },
-
-    promotionsList: {
-        minHeight: '90%',
-        maxHeight: '90%',
-        backgroundColor: '#ffffff'
-    },
 
     containerCam: {
         flex: 1,
         justifyContent: 'center',
         alignItems:'center', 
     },
-
+    
     camera: {
         width:  400,
         height: 400,
@@ -181,11 +142,16 @@ const styles = StyleSheet.create({
 
     contentButton: {
         //flex: 1,
+        flexDirection: 'row',
+        flexWrap: 'wrap',
         justifyContent: "center",
         alignItems: "flex-end",
         margin: 20,
         backgroundColor:'#2e8b57',
         borderRadius: 30, 
+        marginLeft:15,
+        marginRight:5,
+        marginTop:5,
     },
     
     barcodeBox: {
@@ -210,73 +176,18 @@ const styles = StyleSheet.create({
         marginTop: 30
     },
 
-    cardView: {
-        flexDirection: 'row',
-        justifyContent: 'space-between',
-        margin: 5,
-        backgroundColor: "white",
-        borderRadius: 15,
-        padding: 15,
-        shadowColor: "#000",
-        shadowOffset: {
-          width: 0,
-          height: 2
-        },
-        shadowOpacity: 0.25,
-        shadowRadius: 3.84,
-        elevation: 5,
-        width: '94%',
-        minHeight: 200
-    },
-
-    promotionImage: {
-        width: '50%'
-    },
-
-    descriptionText: {
-        flex: 1
-    },
-
-    titleText: {
-        color: "black",
-        fontWeight: "bold",
-        fontSize: 16,
-        margin: 5
-    },
-
-    priceText: {
-        color: "#e73931",
-        fontWeight: "bold",
-        fontSize: 16,
-        margin: 5
-    },
-
-    linkButton: {
-        backgroundColor: "#2196F3",
-        borderRadius: 15,
-        padding: 10,
-        elevation: 2,
-        margin: 5
-    },
-
-    textLinkButton: {
-        color: "#FFFFFF",
-        textAlign: 'center'
-    },
-
-    promotionsList: {
-        minHeight: '90%',
-        maxHeight: '90%',
-        backgroundColor: '#ffffff'
-    }, 
-
     lista: {
-        backgroundColor: "orange",
-        height: 80,
         margin: 5,
         justifyContent: "center",
         alignItems: "center",
         borderRadius: 20,
+        //width:'80%',                //largura
+        height:'auto',              //altura
+        //bottom:0,
+        backgroundColor:'#696969',  //cor de fundo
+        alignItems:'center',        //alinhamento dos itens
+        //marginTop:20,             //altura da margem TOP
+        borderRadius:30,            //angulo das bordas
     },
 
     textoLista: {
@@ -289,7 +200,34 @@ const styles = StyleSheet.create({
         color: "gray",
         fontWeight: "bold",
         fontSize: 18,
-    }
+        marginLeft:5,
+    },
+
+    formContainer: {
+        flexDirection: "row",
+        marginBottom: 20,
+        alignItems: "center",
+    },
+
+    checkbox: {
+        //margin: 8,
+        alignItems: "center",
+    },
+
+    label: {
+        color: '#ffffff',
+        fontSize:16,
+    },
+
+    areaButton: {
+        backgroundColor: '#696969',
+        margin: 20,
+    },
+
+    checkboxContainer: {
+        flexDirection: "row",
+        marginBottom: 20,
+    },
 });
 
 export default styles;

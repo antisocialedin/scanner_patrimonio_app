@@ -1,11 +1,11 @@
 import React from 'react';
 import { View, Text, TouchableOpacity} from 'react-native'
-import styles from '../styles/style';
+import styles from '../../styles/style';
 
-export default function Mensagens ({navigation }) {
+export default function Cadastro ({navigation }) {
     return (
         <View>
-            <Text>Mensagem</Text>
+            <Text>Eventos</Text>
         </View>
     );
 }

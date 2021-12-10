@@ -3,7 +3,7 @@ import { View, Text, TouchableOpacity, SafeAreaView, Button } from 'react-native
 //import { Camera } from "expo-camera";
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import { FontAwesome } from "@expo/vector-icons";
-import styles from '../styles/style';
+import styles from '../../styles/style';
 
 export default function Scanner ({navigation }) {
 
@@ -11,7 +11,7 @@ export default function Scanner ({navigation }) {
     //const [type,setType] = useState(Camera.Constants.Type.back);
     const [hasPermission, setHasPermission] = useState(null);
     const [scanned, setScanned] = useState(false);
-    const [text, setText] = useState('Not yet scanned')
+    const [codigo, setCodigo] = useState('Not yet scanned')
 
     askForCameraPermission = () => {
         (async () => {
@@ -28,7 +28,7 @@ export default function Scanner ({navigation }) {
     // What happens when we scan the bar code
     const handleBarCodeScanned = ({type, data}) => {
         setScanned(true);
-        setText(data);
+        setCodigo(data);
         console.log('Type: ' + type + '\nData:' + data)
     };
 
@@ -65,19 +65,30 @@ export default function Scanner ({navigation }) {
                 ></BarCodeScanner>
             </View>
 
-            <Text style={styles.maintext}>{text}</Text>
+            <Text style={styles.maintext}>{codigo}</Text>
 
             <View style={styles.contentButton}> 
                 {scanned && 
                     <TouchableOpacity 
                         style={styles.cameraButton}
-                        title={'Scan again?'}
                         onPress={() => setScanned(false)}
                     > 
-                        <FontAwesome name="camera" size={23} color="white"></FontAwesome>               
+                        <FontAwesome name="barcode" size={23} color="white"></FontAwesome>               
+                    </TouchableOpacity>
+                }     
+            </View>
+
+            <View style={styles.contentButton}> 
+                {scanned &&
+                    <TouchableOpacity 
+                    style={styles.cameraButton}
+                    onPress={() => navigation.navigate('Verificacao', {codigo})}
+                    >
+                    <FontAwesome name="save" size={23} color="white"></FontAwesome>               
                     </TouchableOpacity>
                 }
             </View>
+            
         </SafeAreaView>
         
     );

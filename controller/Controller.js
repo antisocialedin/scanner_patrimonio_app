@@ -11,6 +11,7 @@ app.use(bodyParser.json());
 let servidor = models.Servidor;
 let patrimonio = models.Patrimonio;
 let area = models.Area;
+let evento = models.Evento
 
 //--------------------------------Padrão----------------------------------//
 app.get('/',(req,res)=>{
@@ -153,15 +154,57 @@ app.post('/gravaPatrimonio',async(req,res) => {
     res.send(insere);
 });
 
-//Consultar Patrimonio [Nome]
+/* app.post('/gravaManualPatrimonio1',async(req,res) => {
+    console.log(req.body);
+    let insere = await patrimonio.create({  
+        codigo: "2763873124529",      
+        nome: "Ar Condicionado",
+        estado: "Bom",
+        areaId: "1",
+        createAt: new Date(),
+        updateAT: new Date()
+    });
+    console.log(insere);
+    res.send(insere);
+});
+
+app.post('/gravaManualPatrimonio2',async(req,res) => {
+    console.log(req.body);
+    let insere = await patrimonio.create({  
+        codigo: 2432529873122,      
+        nome: 'Mesa',
+        estado: 'Bom',
+        areaId: 1,
+        createAt: new Date(),
+        updateAT: new Date()
+    });
+    console.log(insere);
+    res.send(insere);
+});
+
+app.post('/gravaManualPatrimonio3',async(req,res) => {
+    console.log(req.body);
+    let insere = await patrimonio.create({  
+        codigo: 2746309547385,      
+        nome: 'Computador',
+        estado: 'Bom',
+        areaId: 1,
+        createAt: new Date(),
+        updateAT: new Date()
+    });
+    console.log(insere);
+    res.send(insere);
+}) */
+
+/* //Consultar Patrimonio [Nome]
 app.post('/consultaPatrimonio',async(req,res) =>{
     let response = await patrimonio.findOne({where:{nome:req.body.nome}});
     res.send(response);
-});
+}); */
 
 //Consultar Patrimonio [Codigo]
 app.post('/consultaPatrimonio',async(req,res) =>{
-    let response = await patrimonio.findOne({where:{codigo:req.body.codigo}});
+    let response = await patrimonio.findOne({where:{codigo:req.body.codigo}}); 
     res.send(response);
 });
 
@@ -187,11 +230,37 @@ app.post('/excluiPatrimonio', async(req,res) => {
     });    
 });
 
+/* //Listar Patrimonio
+app.post('/ListaPatrimonio',async(req,res) => {
+    let response = await patrimonio.findAll({attributes: ['id', 'codigo', 'nome', 'areaId']}); 
+    console.log(response);
+    res.send(response);    
+}); */
+
 //Listar Patrimonio
 app.post('/ListaPatrimonio',async(req,res) => {
-    let response = await patrimonio.findAll({attributes: ['id', 'codigo', 'nome', 'estado', 'areaId']}); 
+    let response = await patrimonio.findAll(); //{where: { areaId: req.body.areaId }}
     console.log(response);
     res.send(response);    
 });
 
+//--------------------------------Evento----------------------------------//
 
+//Inserir gravação por meio de chamada
+app.post('/gravaEvento',async(req,res) => {
+    console.log(req.body);
+    let insere = await evento.create({        
+        nome: req.body.nome,
+        createAt: new Date(),
+        updateAT: new Date()
+    });
+    console.log(insere);
+    res.send(insere);
+});
+
+//Listar Evento
+app.post('/ListaEvento',async(req,res) => {
+    let response = await evento.findAll({attributes: ['id', 'nome']}); 
+    console.log(response);
+    res.send(response);    
+});

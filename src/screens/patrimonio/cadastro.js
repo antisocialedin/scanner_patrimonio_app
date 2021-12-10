@@ -2,13 +2,12 @@ import React, { useState } from 'react';
 import { Text, View, TextInput, TouchableOpacity } from 'react-native';
 import styles from '../../styles/style';
 
-export default function Cadastro ({navigation }) {
+export default function Cadastro ({navigation, route }) {
 
     //variaveis para armazenar os dados de entrada
     const [codigo, setCodigo] = useState(null);
     const [nome, setNome] = useState(null);
-    const [estado, setEstado] = useState(null);
-    const [areaId, setAreaId] = useState(null);
+    const {areaId} = route.params;
     const [mensagem, setMensagem] = useState(null);
     
 
@@ -68,7 +67,7 @@ export default function Cadastro ({navigation }) {
                             style={styles.input}
                             onChangeText={setCodigo}
                             value={codigo}
-                            placeholder="3748593"
+                            placeholder="Ex: 3748593"
                         ></TextInput>
 
                         <Text style={styles.formLabel}>Descrição:</Text>
@@ -76,7 +75,7 @@ export default function Cadastro ({navigation }) {
                             style={styles.input}
                             onChangeText={setNome}
                             value={nome}
-                            placeholder="Cadeira"
+                            placeholder="Ex: Cadeira"
                         ></TextInput>
 
                         <Text style={styles.formLabel}>Estado:</Text>
@@ -84,7 +83,7 @@ export default function Cadastro ({navigation }) {
                             style={styles.input}
                             onChangeText={setEstado}
                             value={estado}
-                            placeholder="Quebrado"
+                            placeholder="Ex: Quebrado"
                         ></TextInput>
     
                         <Text style={styles.formLabel}>Área:</Text>
@@ -92,7 +91,7 @@ export default function Cadastro ({navigation }) {
                             style={styles.input}
                             onChangeText={setAreaId}
                             value={areaId}
-                            placeholder="C-183"
+                            placeholder="Ex: C-183"
                         ></TextInput>
 
                         <TouchableOpacity
